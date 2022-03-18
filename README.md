@@ -42,7 +42,7 @@ p_element = ScrapingTool.get_html_elements_by_css_selector(
 		html_element=main_page_element,   # html element you want to find the element on
 		html_tag=HtmlTags.P_TAG,          # html tag 		--> "p", "span", etc.
 		attribute_name=HtmlAttributes.ID, # attribute name 	--> "id", "class", etc.
-		attribute_value="p_",            # attribute value 	--> id="p_1"
+		attribute_value="p_",		  # attribute value 	--> id="p_1"
 		string_function_value=XPathStringFunctions.CONTAINS # partial matching
 		get_first_element=True)           # we only need 1 element
 ```
