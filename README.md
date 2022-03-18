@@ -22,8 +22,9 @@ We want the inner text of the paragraph with id = "p_1":
 
 ### Python Code
 ```python
-# First we need to import the constants like html tags ("p", "span", etc.)
+# First we need to import our ScrapingTool the constants like html tags ("p", "span", etc.)
 from <enter_path_here>.scraping_constants import HtmlTags, HtmlAttributes, XPathStringFunctions
+from <enter_path_here>.scraping_tool import ScrapingTool
 
 # We want to get the whole html page first. We will call it the "main_page_element":
 main_page_element = ScrapingTool.get_main_page_element(url="https://www.example.com")
