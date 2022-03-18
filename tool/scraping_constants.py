@@ -1,5 +1,5 @@
 class XPathStringFunctions:
-    CONTAINS_STRING = "contains"
+    CONTAINS = "contains"
 
 class XPathTemplates:
     ATTRIBUTE_SELECTOR_BASE = './/{}[@{}="{}"]'
@@ -12,6 +12,7 @@ class HtmlTags:
     SPAN_TAG = "span"
     INPUT_TAG = "input"
     BUTTON_TAG = "button"
+    SECTION_TAG = "section"
     # TODO: add values to scrape
 
 class HtmlAttributes:
