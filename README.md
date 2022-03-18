@@ -32,7 +32,7 @@ main_page_element = ScrapingTool.get_main_page_element(url="https://www.example.
 # Next, we want to access the paragraph element.
 p_element = ScrapingTool.get_html_elements_by_css_selector(
 		html_element=main_page_element,   # html element you want to find the element on
-		html_tag=HtmlTags.P_TAG,          # html tag 			--> "p", "span", etc.
+		html_tag=HtmlTags.P_TAG,          # html tag 		--> "p", "span", etc.
 		attribute_name=HtmlAttributes.ID, # attribute name 	--> "id", "class", etc.
 		attribute_value="p_1",            # attribute value 	--> id="p_1"
 		get_first_element=True)           # we only need 1 element
@@ -54,16 +54,16 @@ We have seen before how to get to the paragraph element directly. But what if we
 ```python
 section_element = ScrapingTool.get_html_elements_by_css_selector(
 		html_element=main_page_element,       # html element you want to find the element on
-		html_tag=HtmlTags.SECTION_TAG,        # html tag 			--> "p", "span", etc.
-		attribute_name=HtmlAttributes.CLASS,  # attribute name 	--> "id", "class", etc.
-		attribute_value="top",                # attribute value 	--> id="p_1"
+		html_tag=HtmlTags.SECTION_TAG,        # html tag		--> "p", "span", etc.
+		attribute_name=HtmlAttributes.CLASS,  # attribute name		--> "id", "class", etc.
+		attribute_value="top",                # attribute value		--> id="p_1"
 		get_first_element=True)               # we only have 1 section
 
 p_element = ScrapingTool.get_html_elements_by_css_selector(
 		html_element=section_element,         # html element you want to find the element on
-		html_tag=HtmlTags.P_TAG,              # html tag 			--> "p", "span", etc.
-		attribute_name=HtmlAttributes.ID,     # attribute name 	--> "id", "class", etc.
-		attribute_value="p_1",                # attribute value 	--> class="top"
+		html_tag=HtmlTags.P_TAG,              # html tag		--> "p", "span", etc.
+		attribute_name=HtmlAttributes.ID,     # attribute name		--> "id", "class", etc.
+		attribute_value="p_1",                # attribute value		--> class="top"
 		get_first_element=True)               # we only need 1 element
 ```
 And there we go. We have the paragraph element.
