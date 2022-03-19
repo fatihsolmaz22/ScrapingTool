@@ -73,7 +73,13 @@ p_elements = ScrapingTool.get_html_elements_by_css_selector(
 		string_function_value=XPathStringFunctions.CONTAINS) # partial matching
 		
 for p_element in p_elements:
-    # Do something with p_element..
+    print(p_element.text)
+```
+Which would produce:
+```
+My first paragraph.
+My second paragraph.
+My third paragraph.
 ```
 
 ### We can also use the new elements as the new base
