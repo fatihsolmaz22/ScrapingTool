@@ -65,12 +65,15 @@ Check selenium docs for further extraction of element informations --> [Selenium
 Using the example from above, we can use the same function to get a list of elements with or without partial matching:
 
 ```python
-p_element = ScrapingTool.get_html_elements_by_css_selector(
+p_elements = ScrapingTool.get_html_elements_by_css_selector(
 		html_element=main_page_element,   # html element you want to find the element on
 		html_tag=HtmlTags.P_TAG,          # html tag 		--> "p", "span", etc.
 		attribute_name=HtmlAttributes.ID, # attribute name 	--> "id", "class", etc.
 		attribute_value="p_",		  # attribute value 	--> id="p_1"
 		string_function_value=XPathStringFunctions.CONTAINS # partial matching
+		
+for p_element in p_elements:
+    # Do something with p_element..
 ```
 
 ### We can also use the new elements as the new base
