@@ -70,7 +70,7 @@ p_elements = ScrapingTool.get_html_elements_by_css_selector(
 		html_tag=HtmlTags.P_TAG,          # html tag 		--> "p", "span", etc.
 		attribute_name=HtmlAttributes.ID, # attribute name 	--> "id", "class", etc.
 		attribute_value="p_",		  # attribute value 	--> id="p_1"
-		string_function_value=XPathStringFunctions.CONTAINS # partial matching
+		string_function_value=XPathStringFunctions.CONTAINS) # partial matching
 		
 for p_element in p_elements:
     # Do something with p_element..
