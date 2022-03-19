@@ -10,8 +10,8 @@ Welcome to a simple scraping tool.
 <body>
   <section class="top">
     <p id="p_1">My first paragraph.</p>
-    <p id="p_2">My first paragraph.</p>
-    <p id="p_3">My first paragraph.</p>
+    <p id="p_2">My second paragraph.</p>
+    <p id="p_3">My third paragraph.</p>
     <button class="button" onclick="myFunction()">Click me</button>
   </section>
 </body>
