@@ -10,6 +10,8 @@ Welcome to a simple scraping tool.
 <body>
   <section class="top">
     <p id="p_1">My first paragraph.</p>
+    <p id="p_2">My first paragraph.</p>
+    <p id="p_3">My first paragraph.</p>
     <button class="button" onclick="myFunction()">Click me</button>
   </section>
 </body>
@@ -44,7 +46,7 @@ p_element = ScrapingTool.get_html_elements_by_css_selector(
 		attribute_name=HtmlAttributes.ID, # attribute name 	--> "id", "class", etc.
 		attribute_value="p_",		  # attribute value 	--> id="p_1"
 		string_function_value=XPathStringFunctions.CONTAINS # partial matching
-		get_first_element=True)           # we only need 1 element
+		get_first_element=True)           # there are 3 "p_" matching elements but we need only first one
 ```
 Now if we print out the inner text of the element:
 ```python
@@ -57,6 +59,19 @@ print(p_element.getAttribute(HtmlAttributes.CLASS))
 > p_1
 ```
 Check selenium docs for further extraction of element informations --> [Selenium Docs](https://www.selenium.dev/documentation/webdriver/elements/information/)
+
+### Getting list of elements
+
+Using the example from above, we can use the same function to get a list of elements with or without partial matching:
+
+```python
+p_element = ScrapingTool.get_html_elements_by_css_selector(
+		html_element=main_page_element,   # html element you want to find the element on
+		html_tag=HtmlTags.P_TAG,          # html tag 		--> "p", "span", etc.
+		attribute_name=HtmlAttributes.ID, # attribute name 	--> "id", "class", etc.
+		attribute_value="p_",		  # attribute value 	--> id="p_1"
+		string_function_value=XPathStringFunctions.CONTAINS # partial matching
+```
 
 ### We can also use the new elements as the new base
 We have seen before how to get to the paragraph element directly. But what if we wanted the whole section and then the paragraph element?
