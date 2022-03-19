@@ -33,11 +33,11 @@ main_page_element = ScrapingTool.get_main_page_element(url="https://www.example.
 
 # Next, we want to access the paragraph element.
 p_element = ScrapingTool.get_html_elements_by_css_selector(
-		html_element=main_page_element,   # html element you want to find the element on
-		html_tag=HtmlTags.P_TAG,          # html tag 		--> "p", "span", etc.
-		attribute_name=HtmlAttributes.ID, # attribute name 	--> "id", "class", etc.
-		attribute_value="p_1",            # attribute value 	--> id="p_1"
-		get_first_element=True)           # we only need 1 element
+	html_element=main_page_element,   # html element you want to find the element on
+	html_tag=HtmlTags.P_TAG,          # html tag 		--> "p", "span", etc.
+	attribute_name=HtmlAttributes.ID, # attribute name 	--> "id", "class", etc.
+	attribute_value="p_1",            # attribute value 	--> id="p_1"
+	get_first_element=True)           # we only need 1 element
 		
 # Or we could search for it by partial matching with the string function contains()
 p_element = ScrapingTool.get_html_elements_by_css_selector(
