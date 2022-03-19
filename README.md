@@ -41,12 +41,12 @@ p_element = ScrapingTool.get_html_elements_by_css_selector(
 		
 # Or we could search for it by partial matching with the string function contains()
 p_element = ScrapingTool.get_html_elements_by_css_selector(
-		html_element=main_page_element,   # html element you want to find the element on
-		html_tag=HtmlTags.P_TAG,          # html tag 		--> "p", "span", etc.
-		attribute_name=HtmlAttributes.ID, # attribute name 	--> "id", "class", etc.
-		attribute_value="p_",		  # attribute value 	--> id="p_1"
-		string_function_value=XPathStringFunctions.CONTAINS # partial matching
-		get_first_element=True)           # there are 3 "p_" matching elements but we need only first one
+	html_element=main_page_element,   # html element you want to find the element on
+	html_tag=HtmlTags.P_TAG,          # html tag 		--> "p", "span", etc.
+	attribute_name=HtmlAttributes.ID, # attribute name 	--> "id", "class", etc.
+	attribute_value="p_",		  # attribute value 	--> id="p_1"
+	string_function_value=XPathStringFunctions.CONTAINS # partial matching
+	get_first_element=True)           # there are 3 "p_" matching elements but we need only first one
 ```
 Now if we print out the inner text of the element:
 ```python
@@ -66,11 +66,11 @@ Using the example from above, we can use the same function to get a list of elem
 
 ```python
 p_elements = ScrapingTool.get_html_elements_by_css_selector(
-		html_element=main_page_element,   # html element you want to find the element on
-		html_tag=HtmlTags.P_TAG,          # html tag 		--> "p", "span", etc.
-		attribute_name=HtmlAttributes.ID, # attribute name 	--> "id", "class", etc.
-		attribute_value="p_",		  # attribute value 	--> id="p_1"
-		string_function_value=XPathStringFunctions.CONTAINS) # partial matching
+	html_element=main_page_element,   # html element you want to find the element on
+	html_tag=HtmlTags.P_TAG,          # html tag 		--> "p", "span", etc.
+	attribute_name=HtmlAttributes.ID, # attribute name 	--> "id", "class", etc.
+	attribute_value="p_",		  # attribute value 	--> id="p_1"
+	string_function_value=XPathStringFunctions.CONTAINS) # partial matching
 		
 for p_element in p_elements:
     print(p_element.text)
@@ -86,18 +86,18 @@ My third paragraph.
 We have seen before how to get to the paragraph element directly. But what if we wanted the whole section and then the paragraph element?
 ```python
 section_element = ScrapingTool.get_html_elements_by_css_selector(
-		html_element=main_page_element,       # html element you want to find the element on
-		html_tag=HtmlTags.SECTION_TAG,        # html tag		--> "p", "span", etc.
-		attribute_name=HtmlAttributes.CLASS,  # attribute name		--> "id", "class", etc.
-		attribute_value="top",                # attribute value		--> id="p_1"
-		get_first_element=True)               # we only have 1 section
+	html_element=main_page_element,       # html element you want to find the element on
+	html_tag=HtmlTags.SECTION_TAG,        # html tag		--> "p", "span", etc.
+	attribute_name=HtmlAttributes.CLASS,  # attribute name		--> "id", "class", etc.
+	attribute_value="top",                # attribute value		--> id="p_1"
+	get_first_element=True)               # we only have 1 section
 
 p_element = ScrapingTool.get_html_elements_by_css_selector(
-		html_element=section_element,         # html element you want to find the element on
-		html_tag=HtmlTags.P_TAG,              # html tag		--> "p", "span", etc.
-		attribute_name=HtmlAttributes.ID,     # attribute name		--> "id", "class", etc.
-		attribute_value="p_1",                # attribute value		--> class="top"
-		get_first_element=True)               # we only need 1 element
+	html_element=section_element,         # html element you want to find the element on
+	html_tag=HtmlTags.P_TAG,              # html tag		--> "p", "span", etc.
+	attribute_name=HtmlAttributes.ID,     # attribute name		--> "id", "class", etc.
+	attribute_value="p_1",                # attribute value		--> class="top"
+	get_first_element=True)               # we only need 1 element
 ```
 And there we go. We have the paragraph element.
 ## How to click on elements
