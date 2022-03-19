@@ -60,7 +60,7 @@ print(p_element.getAttribute(HtmlAttributes.CLASS))
 ```
 Check selenium docs for further extraction of element informations --> [Selenium Docs](https://www.selenium.dev/documentation/webdriver/elements/information/)
 
-### Getting list of elements and the contents
+### List of elements and the contents
 
 Using the example from above, we can use the same function to get a list of elements with or without partial matching:
 
