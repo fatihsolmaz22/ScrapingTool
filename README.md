@@ -22,7 +22,7 @@ We want the inner text of the paragraph with id = "p_1":
 
     My first paragraph.
 
-### Python Code
+### Single element and its content
 ```python
 # First we need to import our ScrapingTool the constants like html tags ("p", "span", etc.)
 from <enter_path_here>.scraping_constants import HtmlTags, HtmlAttributes, XPathStringFunctions
