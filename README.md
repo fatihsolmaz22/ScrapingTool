@@ -55,7 +55,7 @@ print(p_element.text)
 ```
 Or if we wanted, we could also get its class name:
 ```python
-print(p_element.getAttribute(HtmlAttributes.CLASS))
+print(p_element.get_attribute(HtmlAttributes.CLASS))
 > p_1
 ```
 Check selenium docs for further extraction of element informations --> [Selenium Docs](https://www.selenium.dev/documentation/webdriver/elements/information/)
